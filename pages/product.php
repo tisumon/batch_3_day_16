@@ -7,7 +7,7 @@
 
                     <div class="col-md-4 mb-4">
                         <div class="card">
-                            <img src="assets/img/<?php echo isset($product['image'])? $product['image']: ' '; ?>" alt="" class="card-img-top"/>
+                            <img src="assets/img/<?php echo isset($product['image'])? $product['image']: ' '; ?>" alt="" class="card-img-top"style="height: 300px"/>
                             <div class="card-body">
                                 <h3 class="card-title"><?php echo isset($product['name'])? $product['name']: ' '; ?></h3>
                                 <h4>ID:<?php echo isset($product['id'])? $product['id']: ' '; ?></h4>
@@ -17,7 +17,7 @@
                                 <h4>Description:<?php echo isset($product['description'])? $product['description']: ' '; ?></h4>
 
 
-                                <a href="" class="btn btn-outline-success">Read More</a>
+                                <a href="action.php?pages=detail&&id=<?php echo $product['id']; ?>" class="btn btn-outline-success">Detail</a>
                             </div>
                         </div>
                     </div>

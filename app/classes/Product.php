@@ -7,88 +7,88 @@ namespace App\classes;
 class Product
 {
 
-    Protected $products;
+    Protected $products =[];
 
     public function getAllProduct()
     {
         return[
             0=>[
                 'name'       => 'Shirt',
-                'id'         =>'01',
+                'id'         => '01',
                 'price'      => '1500 Tk.',
-                'brand'      => 'Tarikul',
+                'brand'      => 'Brand 01',
                 'category'   => 'Dress',
                 'description'=> 'A smart shirt',
                 'image'      => 'shirt.jpg'
             ],
             1=>[
                 'name'       => 'Shirt',
-                'id'         =>'02',
+                'id'         => '02',
                 'price'      => '1800 Tk.',
-                'brand'      => 'Tarikul',
+                'brand'      => 'Brand 02',
                 'category'   => 'Dress',
                 'description'=> 'A smart shirt',
-                'image'      => 'shirt.jpg'
+                'image'      => 'shirt1.jpg'
             ],
             2=>[
                 'name'       => 'Shirt',
-                'id'         =>'03',
+                'id'         => '03',
                 'price'      => '1900 Tk.',
-                'brand'      => 'Tarikul',
+                'brand'      => 'Brand 03',
                 'category'   => 'Dress',
                 'description'=> 'A smart shirt',
-                'image'      => 'shirt.jpg'
+                'image'      => 'shirt2.jpg'
             ],
             3=>[
                 'name'       => 'Shirt',
-                'id'         =>'04',
+                'id'         => '04',
                 'price'      => '1400 Tk.',
-                'brand'      => 'Tarikul',
+                'brand'      => 'Brand 04',
                 'category'   => 'Dress',
                 'description'=> 'A smart shirt',
-                'image'      => 'shirt.jpg'
+                'image'      => 'shirt3.jpg'
             ],
             4=>[
                 'name'       => 'Shirt',
-                'id'         =>'05',
+                'id'         => '05',
                 'price'      => '1300 Tk.',
-                'brand'      => 'Tarikul',
+                'brand'      => 'Brand 05',
                 'category'   => 'Dress',
                 'description'=> 'A smart shirt',
-                'image'      => 'shirt.jpg'
+                'image'      => 'pant.jpg'
             ],
             5=>[
                 'name'       => 'Shirt',
-                'id'         =>'06',
+                'id'         => '06',
                 'price'      => '1200 Tk.',
-                'brand'      => 'Tarikul',
+                'brand'      => 'Brand 06',
                 'category'   => 'Dress',
                 'description'=> 'A smart shirt',
-                'image'      => 'shirt.jpg'
+                'image'      => 'pant1.jpg'
             ],
             6=>[
                 'name'       => 'Shirt',
-                'id'         =>'07',
+                'id'         => '07',
                 'price'      => '1100 Tk.',
-                'brand'      => 'Tarikul',
+                'brand'      => 'Brand 07',
                 'category'   => 'Dress',
                 'description'=> 'A smart shirt',
-                'image'      => 'shirt.jpg'
+                'image'      => 'pant2.jpg'
             ],
             7=>[
-                'name'       => 'Shirt',
-                'id'         =>'08',
+                'name'       => 'Smart Watch',
+                'id'         => '08',
                 'price'      => '2500 Tk.',
-                'brand'      => 'Tarikul',
+                'brand'      => 'Brand 08',
                 'category'   => 'Dress',
-                'description'=> 'A smart shirt',
-                'image'      => 'shirt.jpg'
+                'description'=> 'A smart watch',
+                'image'      => 'watch.jpg'
             ],
             8=>[
                 'name'       => 'Shirt',
-                'id'         =>'09',
+                'id'         => '09',
                 'price'      => '3500 Tk.',
-                'brand'      => 'Tarikul',
+                'brand'      => 'Brand 09',
                 'category'   => 'Dress',
                 'description'=> 'A smart shirt',
                 'image'      => 'shirt.jpg'
@@ -96,5 +96,16 @@ class Product
 
 
         ];
+    }
+    public function getProductById($id)
+    {
+        $this->products = $this->getAllProduct();
+        foreach ($this->products as $product)
+        {
+            if($product['id']== $id)
+            {
+                return $product;
+            }
+        }
     }
 }
